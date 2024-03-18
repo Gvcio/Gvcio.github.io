@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        button{
+            background-color: #49aaff;
+            color: aliceblue;
+            font-size: 24px;
+            padding: 10px;
+            text-decoration: none;
+            transition-duration: 0.4s;
+            border: 1px solid #49aaff;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        a{
+            text-decoration: none;
+            color: bisque;
+            
+        }
+        button:hover{
+            background-color: aliceblue;
+            color: #49aaff;
+            border: 1px solid #49aaff;
+        }
+        body{
+            text-align: center;
+            background-color: rgb(62, 62, 62);
+            color: white;
+        }
+        input{
+            margin-bottom: 20px;
+        }
+        .przyciski{
+            background-color:rgb(56, 42, 42) ;
+            border: solid 5px rgb(242, 159, 50);
+        }
+        .liczby{
+            background-color:rgb(56, 42, 42) ;
+            border: solid 5px rgb(50, 130, 242);
+            color:yellowgreen;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 35px;
+        }
+        .wynik{
+            background-color:rgb(56, 42, 42) ;
+            border: solid 5px rgb(92, 242, 50);
+            font-size: 40px;
+        }
+        footer{
+    width: 100%;
+    text-align: center;
+    position:absolute;
+	bottom:0;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="header"><h1>DZIELENIE DO 100</h1></div>
+    <div class="powrut"><h1><a href="index.html">STRONA GŁÓWNA</a></h1></div>
+    <div class="przyciski">
+    <button onclick="losuj()">LOSUJ</button>
+    <button onclick="usuwanie()">USUŃ</button>
+    <button onclick="sprawdz()">SPRAWDŹ</button><br>
+    <input type="number" id="rozwiazanie"><br>
+    </div>
+
+    <div class="liczby">
+    <div id="liczba"></div>
+    </div>
+
+<div class="wynik">
+    <p id="wynik"></p>
+</div>
+<div><footer>Stronę wykonał:Bartłomiej Gut</footer></div>
+    <script>
+        
+        function losuj(){
+            do{
+                a=Math.floor(Math.random()*10+1);
+                b=Math.floor(Math.random()*2+1);
+            }
+            while(b<0);
+            document.getElementById("liczba").innerHTML=a+"^"+b;
+            
+            //document.getElementById("c").innerHTML=c;
+        }
+
+        function sprawdz(){
+            d=document.getElementById("rozwiazanie").value;
+            if(d==a**b)
+            document.getElementById("wynik").innerHTML="DOBRZE :)";
+            else{
+                document.getElementById("wynik").innerHTML="ŻLE :(";
+            }
+        }
+        function usuwanie(){
+            document.getElementById("liczba1").innerHTML=" ";
+            document.getElementById("liczba2").innerHTML=" ";
+            document.getElementById("wynik").innerHTML=" ";
+        }
+    </script>
+</body>
+</html>

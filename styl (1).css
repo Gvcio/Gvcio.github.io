@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+
+/*
+    font-family: "Anta", sans-serif;
+*/
+  
+
+
+  .zegar{
+    color: #00ff59;
+    font-family: "Anta",sans-serif;
+    font-size: 50px;
+
+    position: absolute;
+    top: 50%;
+    left: 40%;
+  }
